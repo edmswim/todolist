@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif; 
+    background-color: #EEE2DC;
+    color: #413c3e;
+}
+
+header {
+    background-color: #123C69;
+    color: #f3eaee;
+    font-size: 24px;
+    position: fixed;
+    margin-top: 0px;
+    padding: 0px;
+    height: 60px;
+    width: 100%;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+    .title {
+        padding-top: 6px;
+        padding-left: 2vw;
+        font-size: 35px;
+        font-family: 'Shadows Into Light', cursive;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .userWelcome {
+        padding-top: 6px;
+        font-size: 15px;
+        padding-left: 5px;
+
+        margin: 0;
+        display: inline-block;
+    }
+
+#sidebar {
+    background-color: #EDC7B7;
+    width: 190px;
+    height: 100%;
+    margin-top: 60px;
+    position: fixed;
+    overflow-y: scroll;
+
+}
+
+    #all {
+        padding-top: 20px;
+    }
+    .sidebarItem {
+        list-style-type: none;
+        font-size: 20px;
+        margin: 20px 0;
+        font-weight: bold;
+    }
+    .sidebarItem:hover {
+        color: #AC3B61;
+        cursor: pointer;
+    }
+
+    .sidebarItem.active {
+        color: #AC3B61;
+    }
+
+    .divider {
+        margin: -20px 0 20px 0;
+        color: #8b8487;
+        list-style-type: none;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+
+#container {
+    padding: 0;
+    margin-top: 60px;
+    margin-left: 190px;
+    float: right;
+    position: absolute;
+    width: calc(100% - 190px);
+}
+
+    .subheader {
+        display: inline;
+        margin-top: 20px;
+        position: relative;
+        
+    }
+
+    #subheader {
+        padding: 20px 40px 20px 20px;
+        height: 25px;
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    #subheaderName {
+        float: left;
+        width: 50%;
+        padding: 0px;
+        margin: 0px; 
+        font-size: 25px;
+    }
+
+    #subheaderRank {
+        text-align: right;
+        float: right;
+        width: 50%;
+        font-size: 16px;
+        padding-top: 10px; 
+        margin: 0;
+        color: rgb(136, 135, 135)
+    }
+
+    #subbody {
+        position: relative;
+    }
+
+    .filterOption:hover {
+        color: #AC3B61;
+        cursor: pointer;
+    }
+
+    .filterOption.active {
+        color: rgb(9, 9, 107);
+    }
+
+#subbody {
+    margin-left: 40px;
+    table-layout: fixed;
+    margin-right: 40px;
+}
+    table {
+        table-layout: fixed;
+    }
+
+    th, td {
+        overflow: hidden;
+    }
+
+    .taskRow {
+        font-size: 20px;
+        float: center;
+        border-bottom: 2px gray;
+        height: 40px;
+        
+    }
+
+        .taskButton {
+            width: 17px;
+        }
+
+        .icon:hover {
+            fill: #AC3B61;
+        }
+
+        .taskName {
+            width: calc(100vw - 190px - 180px - 75px);
+            padding-left: 10px;
+        }
+
+        .taskDate {
+            font-size: 15px;
+            width: 50px;
+            padding: 0 10px 0 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .taskDate.overdue {
+            color: rgb(219, 47, 47);
+        }
+
+        .taskDate.comingSoon {
+            color: rgb(172, 172, 36);
+        }
+
+        .taskProject {
+            color: gray;
+            font-size: 13px;
+            width: 65px;
+        }
+
+        .complete {
+            border-radius: 50%;
+            height: 16px;
+            width: 16px;
+            background-color: #f0d4d4;
+            border-color:red;
+            border-width: 2px;
+            border-style: solid;
+            padding: 0;
+            margin: 0 0 4px 0;
+        }
