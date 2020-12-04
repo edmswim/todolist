@@ -76,7 +76,7 @@ header {
 
 #container {
     padding: 0;
-    margin-top: 60px;
+    margin-top: 80px;
     margin-left: 190px;
     float: right;
     position: absolute;
@@ -97,101 +97,109 @@ header {
         /* overflow: hidden; */
     }
 
-    #subheaderName {
-        float: left;
-        width: 50%;
-        padding: 0px;
-        margin: 0px; 
-        font-size: 25px;
-    }
+        #subheaderName {
+            float: left;
+            width: 50%;
+            padding: 0px;
+            margin: 0px; 
+            font-size: 25px;
+        }
 
-    #subheaderRank {
-        text-align: right;
-        float: right;
-        width: 50%;
-        font-size: 16px;
-        padding-top: 10px; 
-        margin: 0;
-        color: rgb(136, 135, 135)
-    }
+        #subheaderRank {
+            text-align: right;
+            float: right;
+            width: 50%;
+            font-size: 16px;
+            padding-top: 10px; 
+            margin: 0;
+            color: rgb(136, 135, 135)
+        }
+
+        #subbody {
+            position: relative;
+        }
+
+        .filterOption:hover {
+            color: #AC3B61;
+            cursor: pointer;
+        }
+
+        .filterOption.active {
+            color: rgb(9, 9, 107);
+        }
 
     #subbody {
-        position: relative;
-    }
-
-    .filterOption:hover {
-        color: #AC3B61;
-        cursor: pointer;
-    }
-
-    .filterOption.active {
-        color: rgb(9, 9, 107);
-    }
-
-#subbody {
-    margin-left: 40px;
-    table-layout: fixed;
-    margin-right: 40px;
-}
-    table {
+        margin-left: 40px;
         table-layout: fixed;
+        margin-right: 40px;
     }
-
-    th, td {
-        overflow: hidden;
-    }
-
-    .taskRow {
-        font-size: 20px;
-        float: center;
-        border-bottom: 2px gray;
-        height: 40px;
-        
-    }
-
-        .taskButton {
-            width: 17px;
+        table {
+            table-layout: fixed;
         }
 
-        .icon:hover {
-            fill: #AC3B61;
+        th, td {
+            overflow: hidden;
         }
 
-        .taskName {
-            width: calc(100vw - 190px - 180px - 75px);
-            padding-left: 10px;
+        .taskRow {
+            font-size: 20px;
+            float: center;
+            border-bottom: 2px gray;
+            height: 40px;
+            
         }
 
-        .taskDate {
-            font-size: 15px;
-            width: 50px;
-            padding: 0 10px 0 0;
-            margin: 0;
-            text-align: right;
-        }
+            .taskButton {
+                width: 17px;
+            }
 
-        .taskDate.overdue {
-            color: rgb(219, 47, 47);
-        }
+            .icon > svg {
+                height: 15px;
+                width: 15px;
+            }
 
-        .taskDate.comingSoon {
-            color: rgb(172, 172, 36);
-        }
+            .icon > svg:hover {
+                fill: #AC3B61;
+            }
 
-        .taskProject {
-            color: gray;
-            font-size: 13px;
-            width: 65px;
-        }
+            .taskName {
+                width: calc(100vw - 190px - 180px - 75px);
+                padding-left: 10px;
+            }
 
-        .complete {
-            border-radius: 50%;
-            height: 16px;
-            width: 16px;
-            background-color: #f0d4d4;
-            border-color:red;
-            border-width: 2px;
-            border-style: solid;
-            padding: 0;
-            margin: 0 0 4px 0;
-        }
+            .taskDate {
+                font-size: 15px;
+                width: 50px;
+                padding: 0 10px 0 0;
+                margin: 0;
+                text-align: right;
+            }
+
+            .taskDate.overdue {
+                color: rgb(219, 47, 47);
+            }
+
+            .taskDate.comingSoon {
+                color: rgb(172, 172, 36);
+            }
+
+            .taskProject {
+                color: gray;
+                font-size: 13px;
+                width: 65px;
+            }
+
+            .taskButton > button {
+                border-radius: 50%;
+                height: 16px;
+                width: 16px;
+                border-width: 2px;
+                border-style: solid;
+                padding: 0;
+                margin: 0 0 4px 0;
+            }
+
+            .taskButton > button.highPriority {
+                background-color: #f0d4d4;
+                border-color:red;
+            }
