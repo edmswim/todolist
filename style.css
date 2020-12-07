@@ -137,6 +137,11 @@ header {
             table-layout: fixed;
         }
 
+        tr.complete {
+            color: grey;
+            text-decoration: line-through;
+        }
+
         th, td {
             overflow: hidden;
         }
@@ -202,4 +207,24 @@ header {
             .taskButton > button.highPriority {
                 background-color: #f0d4d4;
                 border-color:red;
+            }
+            
+            #addNewItemButton {
+                height: 25px;
+                width: 25px;
+                fill: grey;
+            }
+
+            #addNewItemText {
+                font-size: 20px;
+                margin-left: 5px;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                display: inline-block;
+                color: grey;
+            }
+
+            .addNewItem {
+                padding-top:10px;
+                color: grey;
             }
