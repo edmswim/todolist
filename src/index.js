@@ -6,8 +6,8 @@
 
     //adding values to array
         addListToArray(storageItems.allListItems, "walk ted", "","2020-12-08","highPriority","Dog Stuff");
-        addListToArray(storageItems.allListItems, "walk dog", "","2020-12-07","highPriority","Dog Stuff");
-        addListToArray(storageItems.allListItems, "walk scoop", "","2020-12-07","highPriority","Dog Stuff");
+        addListToArray(storageItems.allListItems, "walk dog", "","2020-12-07","lowPriority","Dog Stuff");
+        addListToArray(storageItems.allListItems, "walk scoop", "","2020-12-07","lowPriority","Dog Stuff");
         addListToArray(storageItems.allListItems, "get bread", "","2020-12-06","highPriority","Home List");
         addListToArray(storageItems.allListItems, "get cheese", "","2020-12-06","highPriority","Home List");
         addListToArray(storageItems.allListItems, "finish to-do list app", "","2020-12-05 ","highPriority","Coding");
@@ -40,4 +40,5 @@ todo list
         - view description modal
         - edit modal
         - upon clicking complete it should refresh...no idea how to do this with our existing structure
+        - fix priorities
 */
