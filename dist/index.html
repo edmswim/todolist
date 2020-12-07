@@ -16,14 +16,16 @@
         <div id="sidebar">
             <h1></h1>
             <ul>
-                <li class="sidebarItem active" id="" onclick="filterController.sidebarFilterClear()">All Tasks</li>
+                <li class="sidebarItem active" id='allTasks' data-value="">All Tasks</li>
                 <li class="divider">___</li>
-                <li class="sidebarItem" id="today" onclick="testFunction()">Today</li>
-                <li class="sidebarItem" id="tomorrow">Tomorrow</li>
-                <li class="sidebarItem" id="week">Week</li>
+                <li class="sidebarItem sidebarTime" data-value='today'>Today</li>
+                <li class="sidebarItem sidebarTime" data-value="tomorrow">Tomorrow</li>
+                <li class="sidebarItem sidebarTime" data-value="week">Week</li>
                 <li class="divider">____</li>
-                <li class="sidebarItem" id="Project1">Project1</li>
-                <li class="sidebarItem" id="Project2">Project2</li>
+                <div id="projectList">
+                    <li class="sidebarItem" data-value="Project1">Project1</li>
+                    <li class="sidebarItem" data-value="Project2">Project2</li>
+                </div>
             </ul>
         </div>
     
@@ -31,20 +33,35 @@
             <div id="subheader">
                 <div class="subheader" id="subheaderName">All Tasks</div>
                 <div class="subheader" id="subheaderRank">
-                    <span class="filterOption active" id="active">Active</span>
+                    <span class="filterOption active" id="active" data-value="incomplete">Active</span>
                     <span>|</span>
+                    <!--
                     <span class="filterOption" id="onHold">On Hold</span>
                     <span>|</span>
-                    <span class="filterOption" id="complete">Complete</span>
+                    -->
+                    <span class="filterOption" id="complete" data-value="complete">Complete</span>
                     <span>|</span>
-                    <span class="filterOption" id="">All</span>
+                    <span class="filterOption" id="all" data-value="">All</span>
                 </div>
             </div>
             <div id="subbody">
-                <table id="taskListTable"></table>
+                <table id="taskList">
+                </table>
+                <table id="addNewItem">
+                    <tr>
+                        <td class="addNewItem">
+                            
+                            <svg id="addNewItemButton" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> <g> <path d="M256,0C114.833,0,0,114.833,0,256s114.833,256,256,256s256-114.853,256-256S397.167,0,256,0z M256,472.341 c-119.275,0-216.341-97.046-216.341-216.341S136.725,39.659,256,39.659S472.341,136.705,472.341,256S375.295,472.341,256,472.341z "/> </g> </g> <g> <g> <path d="M355.148,234.386H275.83v-79.318c0-10.946-8.864-19.83-19.83-19.83s-19.83,8.884-19.83,19.83v79.318h-79.318 c-10.966,0-19.83,8.884-19.83,19.83s8.864,19.83,19.83,19.83h79.318v79.318c0,10.946,8.864,19.83,19.83,19.83 s19.83-8.884,19.83-19.83v-79.318h79.318c10.966,0,19.83-8.884,19.83-19.83S366.114,234.386,355.148,234.386z"/> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>
+                            <span id="addNewItemText">Add new item</span>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
         <!-- <h1> TEST</h1> -->
-        <script src="main.js" type="text/javascript"></script>
+        <script src="main.js" type="text/javascript"></script> 
+        <footer>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/dmitri13" title="dmitri13">dmitri13</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </footer>
     </body>
 </html>

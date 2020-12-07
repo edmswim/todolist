@@ -13,21 +13,23 @@ const filterController = {
     //is there a way we could have put this into a separate module? I'm not sure how to pass through filterobj and controller through html
     
     sidebarFilterClear: function() {
-        console.log("sidebarFilterClear")
-        filterObj.sidebarProjectSelection = "";
-        filterObj.sidebarTimeSelection = "";
+        filterObj.sidebarProject = "";
+        filterObj.sidebarTime = "";
         uploadFilteredTaskList();
     },
 
     sidebarFilterTime: function(timeSelection) {
-        filterObj.sidebarProjectSelection = "";
-        filterObj.sidebarTimeSelection = timeSelection;
+        filterObj.sidebarProject = "";
+        filterObj.sidebarTime = timeSelection;
         uploadFilteredTaskList();
+        //Testing
+            // console.log(`The current filter time is ${filterObj.sidebarTime}`);
+            // console.log(`The current filter project is ${filterObj.sidebarProject}`)
     },
 
     sidebarFilterProject: function(projectSelection) {
-        filterObj.sidebarProjectSelection = projectSelection;
-        filterObj.sidebarTimeSelection = "";
+        filterObj.sidebarProject = projectSelection;
+        filterObj.sidebarTime = "";
         uploadFilteredTaskList();
     },
 

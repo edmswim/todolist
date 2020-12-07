@@ -1,15 +1,24 @@
- import addListToArray from './addNewListItem';
- import filterController from './sidebarFunctions/navControls';
+ import addListToArray from './addNewListItem.js';
+ import navigationFunctions from './navigationDOM.js';
+ import storageItems from './storage.js';
 
 //testing below
 
     //adding values to array
-        addListToArray(controller.allListItems, "walk dog", "","2020-11-20","highPriority","project1");
-        addListToArray(controller.allListItems, "get bread", "","2020-12-02","highPriority","project2");
-        console.log(controller.allListItems);
+        addListToArray(storageItems.allListItems, "walk ted", "","2020-12-08","highPriority","Dog Stuff");
+        addListToArray(storageItems.allListItems, "walk dog", "","2020-12-07","highPriority","Dog Stuff");
+        addListToArray(storageItems.allListItems, "walk scoop", "","2020-12-07","highPriority","Dog Stuff");
+        addListToArray(storageItems.allListItems, "get bread", "","2020-12-06","highPriority","Home List");
+        addListToArray(storageItems.allListItems, "get cheese", "","2020-12-06","highPriority","Home List");
+        addListToArray(storageItems.allListItems, "finish to-do list app", "","2020-12-05 ","highPriority","Coding");
+        console.log(storageItems.allListItems);
 
     //testing filter
-    filterController.sidebarFilterClear();
+    navigationFunctions.updateDom();
+
+
+    
+
 
 
 //-------------
@@ -27,13 +36,8 @@
 todo list
 
     javascript:
-        -upload sidebar based on distinct projects in array
-            - removing duplicates
-        - making the sidebar functional - onclick run the functions
-        - add new item
-
-
-    css:
-         - add css to designate a completed item on the list
-
+        - new item modal
+        - view description modal
+        - edit modal
+        - upon clicking complete it should refresh...no idea how to do this with our existing structure
 */

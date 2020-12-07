@@ -1,4 +1,4 @@
-import {addDays, endOfWeek, format} from 'date-fns'
+import {addDays, endOfWeek, startOfDay, format} from 'date-fns'
 
 const stripTime = function(time) {
     return format(time, 'yyyy-MM-dd');
@@ -31,9 +31,11 @@ const sidebarTimeFilter = function (taskArray, sidebarFilter) {
     }
     else if (sidebarFilter == "week") {
         const filterFunction = function(element) {
-            if (element.dueDate >= today && element.dueDate <= week) 
-                {return true;}
-            else {return false}
+            if (element.dueDate >= startOfDay(today) && element.dueDate <= week) 
+                {
+                    return true;}
+            else {
+                return false}
         }
         return taskArray.filter(filterFunction);
     }
@@ -60,7 +62,6 @@ const filterObj = {
     sidebarProject: "",
     sidebarTime: "",
     filterArrayFunction: function(taskArray) {
-        console.log(this);
         var sideBarFilteredArray = sidebarTimeFilter(taskArray, this.sidebarTime);
         var filteredProjectArray = compareFilter(sideBarFilteredArray, this.sidebarProject, 'project');
         var completionFilterArray = compareFilter(filteredProjectArray, this.completionFilter, 'completionStatus');

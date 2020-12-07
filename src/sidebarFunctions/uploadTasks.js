@@ -10,7 +10,7 @@ const displayEditModal = function(task) {
 }
 
 const uploadTaskList = function(taskListArray) {
-    const taskListTable = document.getElementById("taskListTable");
+    const taskListTable = document.getElementById("taskList");
     taskListTable.innerHTML = "";
     for (let i=0; i<taskListArray.length; i++)
     {
@@ -37,7 +37,7 @@ const uploadTaskList = function(taskListArray) {
                 var today = format(new Date(), 'yyyy-MM-dd');
                 var listedDate = format(taskListArray[i].dueDate, 'yyyy-MM-dd');
                 if (listedDate > today) {
-                      console.log("Due date in future");
+                      //console.log("Due date in future");
                  } 
                 else if (listedDate == today) {
                      rowItemDueDate.classList.add('comingSoon');
