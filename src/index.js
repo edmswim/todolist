@@ -14,11 +14,14 @@
         addListToArray(storageItems.allListItems, "finish to-do list app", "","2020-12-05 ","highPriority","Coding");
         console.log(storageItems.allListItems);
 
+        var localStoragePull = function () {storageItems.allListItems = JSON.parse(localStorage.getItem('toDoList'))};
+
     //testing filter
     navigationFunctions.updateDom();
     console.log("test");
     newListItem.modalOpenClose();
     newListItem.modalSubmitButton();
+
 
 
     

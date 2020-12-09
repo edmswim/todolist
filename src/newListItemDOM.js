@@ -25,10 +25,19 @@ const newListItem = {
     modalSubmitButton: function() {
         const button = document.getElementById("addNewListItemButton");
         let addItem = newListItem.addNewListItem.bind(newListItem);
-        var formValid = document.getElementById("newItemForm").checkValidity();
-        button.addEventListener("click", function() {
-            if(formValid) {addItem();}
-            else (console.log("Form not complete"))
+        var formValid = document.getElementById("taskName").checkValidity();
+        button.addEventListener("click", function(e) {
+            console.log(formValid);
+            if(formValid) {
+                addItem();
+                //need to figure out how to prevent default refresh. Below does not work...
+                //e.preventDefault();
+                //localStorage.setItem('toDoList', JSON.stringify(storageItems.allListItems));
+            }
+            else {
+                console.log("Form not complete");
+                console.log(storageItems.allListItems);
+            };
         })
     }
 

@@ -73,18 +73,18 @@
               <span id="closeAddNewModal" class="close">&times;</span>
                 <h1>Add a new task</h1>
                 <form id="newItemForm">
-                    <input class="fullLine" type="text" id="taskName" name="taskName" placeholder="Name of task" required>
+                    <input class="fullLine" type="text" id="taskName" name="taskName" placeholder="Name of task" required="true">
                     <br>
                     <textarea class="fullLine" id="taskDescription" name="taskDescription" placeholder="Task Description" rows="4" ></textarea>
                     <br>
                     <input class="partialLine" type="date" id="dueDate" name="dueDate" placeholder=""       >
-                    <input class="partialLine center" type="text" id="project" name="project" placeholder="Project Name" required>
+                    <input class="partialLine center" type="text" id="project" name="project" placeholder="Project Name">
                     <select class="partialLine" id="importance" name="importance">
                         <option value="lowPriority">Low Priority</option>
                         <option value="mediumPriority">Medium Priority</option>
                         <option value="highPriority">High Priority</option>
                     </select>
-                    <button id="addNewListItemButton">Submit</button>             
+                    <button type="button" id="addNewListItemButton">Submit</button>             
                </form>
                 
             </div>
