@@ -70,28 +70,50 @@
         <div id="addNewItemModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
-              <span class="close">&times;</span>
-                <form>
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1"> I have a bike</label><br>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                    <label for="vehicle2"> I have a car</label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                    <label for="vehicle3"> I have a boat</label>
-                </form>
+              <span id="closeAddNewModal" class="close">&times;</span>
+                <h1>Add a new task</h1>
+                <form id="newItemForm">
+                    <input class="fullLine" type="text" id="taskName" name="taskName" placeholder="Name of task" required>
+                    <br>
+                    <textarea class="fullLine" id="taskDescription" name="taskDescription" placeholder="Task Description" rows="4" ></textarea>
+                    <br>
+                    <input class="partialLine" type="date" id="dueDate" name="dueDate" placeholder=""       >
+                    <input class="partialLine center" type="text" id="project" name="project" placeholder="Project Name" required>
+                    <select class="partialLine" id="importance" name="importance">
+                        <option value="lowPriority">Low Priority</option>
+                        <option value="mediumPriority">Medium Priority</option>
+                        <option value="highPriority">High Priority</option>
+                    </select>
+                    <button id="addNewListItemButton">Submit</button>             
+               </form>
                 
             </div>
         </div>
 
-        <!-- 
+        <div id="editItemModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+                <h1>Edit task</h1>
+                <form id="newItemForm">
+                    <input class="fullLine" type="text" id="taskNameEdit" name="taskName" placeholder="Name of task" required>
+                    <br>
+                    <textarea class="fullLine" id="taskDescriptionEdit" name="taskDescription" placeholder="Task Description" rows="4" ></textarea>
+                    <br>
+                    <input class="partialLine" type="date" id="dueDateEdit" name="dueDate" placeholder="">
+                    <input class="partialLine center" type="text" id="projectEdit" name="project" placeholder="Project Name" required>
+                    <select class="partialLine" id="importanceEdit" name="importance">
+                        <option value="lowPriority">Low Priority</option>
+                        <option value="mediumPriority">Medium Priority</option>
+                        <option value="highPriority">High Priority</option>
+                    </select>
+                    <input type="submit" value="Update">                    
+               </form>
+                
+            </div>
+        </div>
 
-            form should ask for
-                - name of task
-                - Task description
-                - due date
-                - project
-                - importance
-         -->
+
         <script src="main.js" type="text/javascript"></script> 
         <footer>
           <!---  
