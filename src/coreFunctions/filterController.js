@@ -1,8 +1,9 @@
-//onclick you should pass through the function
-//functions are all tasks, date, project, 
+
 import uploadTaskList from './uploadTaskList';
 import filterTasks from './filterTasks';
 import storageItems from '../storageItems.js'
+
+//filter controller operates the filter task. Depending on the function called, it will change the variables in filterTask and run the function in there to filter the array. 
 
 var uploadFilteredTaskList = function() {     
         let filteredArray = filterTasks.filterArrayFunction(storageItems.allListItems);
@@ -10,7 +11,6 @@ var uploadFilteredTaskList = function() {
 }
 
 const filterController = {
-    //is there a way we could have put this into a separate module? I'm not sure how to pass through filterTasks and controller through html
     sidebarFilterOnLoad: function() {
         filterTasks.getStorage();
         uploadFilteredTaskList();

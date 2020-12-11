@@ -1,6 +1,8 @@
 import {format, toDate} from 'date-fns'
 import listItemFunctions from './listItemFunctions.js'
-import editListItem from '../editItem/editItemDOM.js'
+import editListItem from './editItemDOM.js'
+
+//upload a task to the DOM
 
 const editButton = function() {console.log("edit")};
 

@@ -1,5 +1,7 @@
 import storageItems from '../storageItems.js';
 
+//This module has functions that allow us to manipulate tasks, including deleting them and marking them complete
+
 const listItemFunctions = (() => {
     
     const markComplete = function(object) {

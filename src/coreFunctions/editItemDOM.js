@@ -1,6 +1,7 @@
 import {format} from 'date-fns'
 import storageItems from '../storageItems.js';
 
+//This module creates the edit modal functionality and gives user ability to edit to-do item, and submit it.
 const editListItem = function() {
     const editItemModal = document.getElementById('editItemModal');
     

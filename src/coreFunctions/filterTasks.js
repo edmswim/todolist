@@ -1,6 +1,6 @@
 import {addDays, endOfWeek, startOfDay, format} from 'date-fns'
 
-
+//this contains the functionality to filter an array, and stores the variables on which its filtered on.
 
 const filterTasks = function() {
 

@@ -2,8 +2,7 @@ import filterController from './filterController';
 import filterTasks from './filterTasks';
 import storageItems from '../storageItems.js';
 
-//is this the right format? Or should all of the below functions be tucked into a singular object?
-
+//this is the primary "DOM" manipulation module, which lets us adjust the dom on various actions
 const resetActiveSidebar = function() {
     var sidebarItems = document.getElementsByClassName('sidebarItem');
     for(let i=0; i<sidebarItems.length; i++) {
