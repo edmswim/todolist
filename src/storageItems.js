@@ -1,7 +1,5 @@
 const storageItems = function() {
     let allListItems = [];
-    let completionFilter;
-    let sidebarFilter;
     let getStorage = function() {
         var storedItems = JSON.parse(localStorage.getItem('toDoList'))
         for (let i=0; i<storedItems.length; i++){

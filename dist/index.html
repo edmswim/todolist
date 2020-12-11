@@ -15,12 +15,14 @@
         
         <div id="sidebar">
             <h1></h1>
-            <ul>
-                <li class="sidebarItem active" id='allTasks' data-value="">All Tasks</li>
+            <ul id="sidebarUl">
+                <li class="sidebarItem" id='allTasks' data-value="">All Tasks</li>
                 <li class="divider">___</li>
-                <li class="sidebarItem sidebarTime" data-value='today'>Today</li>
-                <li class="sidebarItem sidebarTime" data-value="tomorrow">Tomorrow</li>
-                <li class="sidebarItem sidebarTime" data-value="week">Week</li>
+                <div id="timeList">
+                    <li class="sidebarItem sidebarTime" data-value='today'>Today</li>
+                    <li class="sidebarItem sidebarTime" data-value="tomorrow">Tomorrow</li>
+                    <li class="sidebarItem sidebarTime" data-value="week">Week</li>
+                </div>
                 <li class="divider">____</li>
                 <div id="projectList">
                     <li class="sidebarItem" data-value="Project1">Project1</li>
@@ -33,7 +35,7 @@
             <div id="subheader">
                 <div class="subheader" id="subheaderName">All Tasks</div>
                 <div class="subheader" id="subheaderRank">
-                    <span class="filterOption active" id="active" data-value="incomplete">Active</span>
+                    <span class="filterOption" id="active" data-value="incomplete">Active</span>
                     <span>|</span>
                     <!--
                     <span class="filterOption" id="onHold">On Hold</span>

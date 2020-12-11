@@ -1,23 +1,24 @@
 import filterController from './filterController';
+import filterTasks from './filterTasks';
 import storageItems from '../storageItems.js';
 
 //is this the right format? Or should all of the below functions be tucked into a singular object?
 
-var resetActiveSidebar = function() {
+const resetActiveSidebar = function() {
     var sidebarItems = document.getElementsByClassName('sidebarItem');
     for(let i=0; i<sidebarItems.length; i++) {
         sidebarItems[i].classList.remove('active');
     }
 }
 
-var resetActiveTopBar = function() {
+const resetActiveTopBar = function() {
     var sidebarItems = document.getElementsByClassName('filterOption');
     for(let i=0; i<sidebarItems.length; i++) {
         sidebarItems[i].classList.remove('active');
     }
 }
 
-var addClickFunctionTime = function() {
+const addClickFunctionTime = function() {
     var timeList = document.getElementsByClassName('sidebarTime');
     for (let i=0; i<timeList.length; i++) {
         timeList[i].addEventListener("click", function() {
@@ -28,12 +29,16 @@ var addClickFunctionTime = function() {
     }
 }
 
-var addClickFunctionAllTasks = function () {
+const addClickFunctionAllTasks = function () {
     var allTaskButton = document.getElementById('allTasks');
-    allTaskButton.addEventListener("click", filterController.sidebarFilterClear)
+    allTaskButton.addEventListener("click", function() {
+        filterController.sidebarFilterClear();
+        resetActiveSidebar();
+        allTaskButton.classList.add('active');
+    });
 }
 
-var addClickFunctionTopBar = function() {
+const addClickFunctionTopBar = function() {
     var allTopSelectors = document.getElementsByClassName('filterOption');
     for (let i=0; i<allTopSelectors.length; i++) {
         allTopSelectors[i].addEventListener("click", function() {
@@ -44,7 +49,7 @@ var addClickFunctionTopBar = function() {
     }
 }
 
-var displayProjects = function (array) {
+const displayProjects = function (array) {
     var allProjects = array.map(function(obj) {return obj.project});
     let distinctProjects = allProjects.filter(function(v,i) {return allProjects.indexOf(v)==i;});
     var projectList = document.getElementById("projectList");
@@ -64,13 +69,40 @@ var displayProjects = function (array) {
     return distinctProjects;
 }
 
+const updateActive = function() {
+    //updating topbar to display active filter
+    if(filterTasks.completionFilter == "") {document.getElementById("all").classList.add('active')}
+    else {
+        const completionBar = document.getElementById("subheaderRank").querySelectorAll(`[data-value=${filterTasks.completionFilter}]`)[0];
+        completionBar.classList.add('active')
+    }
+
+    //updating sidebar to display active filter
+    if (filterTasks.sidebarProject=="" && filterTasks.sidebarTime=="") {
+        
+        document.getElementById("allTasks").classList.add('active')
+    }
+    else if(filterTasks.sidebarTime=="") {
+        document.getElementById("projectList").querySelectorAll(`[data-value="Dog Stuff"]`)[0].classList.add('active')
+    }
+    else if (filterTasks.sidebarProject=="") {
+        document.getElementById("timeList").querySelectorAll(`[data-value=${filterTasks.sidebarTime}]`)[0].classList.add('active')
+    }
+    else {
+        console.log("error")
+        console.log(filterTasks.sidebarProject);
+        console.log(filterTasks.sidebarTime)
+    }
+}
+
 const navigationFunctions = {
     updateDom: function() {
         addClickFunctionTime();
         addClickFunctionAllTasks();
         addClickFunctionTopBar();
         displayProjects(storageItems.allListItems);
-        filterController.sidebarFilterClear();
+        filterController.sidebarFilterOnLoad();
+        updateActive();
     }
 }
 
