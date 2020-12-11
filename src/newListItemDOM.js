@@ -1,5 +1,5 @@
 import addListToArray from './addNewListItem.js';
-import storageItems from './storage.js';
+import storageItems from './storageItems.js';
 
 const newListItem = {
     modalOpenClose: function() {
@@ -25,11 +25,14 @@ const newListItem = {
     modalSubmitButton: function() {
         const button = document.getElementById("addNewListItemButton");
         let addItem = newListItem.addNewListItem.bind(newListItem);
-        var formValid = document.getElementById("taskName").checkValidity();
-        button.addEventListener("click", function(e) {
+        
+        button.addEventListener("click", function() {
             console.log(formValid);
+            var formValid = document.getElementById("newItemForm").checkValidity();
             if(formValid) {
                 addItem();
+                storageItems.setStorage();
+                addNewItemModal.style.display="none";
                 //need to figure out how to prevent default refresh. Below does not work...
                 //e.preventDefault();
                 //localStorage.setItem('toDoList', JSON.stringify(storageItems.allListItems));

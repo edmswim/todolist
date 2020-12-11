@@ -1,26 +1,30 @@
  import addListToArray from './addNewListItem.js';
  import navigationFunctions from './navigationDOM.js';
- import storageItems from './storage.js';
+ import storageItems from './storageItems.js';
  import newListItem from './newListItemDOM'
 
 //testing below
 
-    //adding values to array
-        addListToArray(storageItems.allListItems, "walk ted", "","2020-12-08","highPriority","Dog Stuff");
-        addListToArray(storageItems.allListItems, "walk dog", "","2020-12-07","mediumPriority","Dog Stuff");
-        addListToArray(storageItems.allListItems, "walk scoop", "","2020-12-07","lowPriority","Dog Stuff");
-        addListToArray(storageItems.allListItems, "get bread", "","2020-12-06","highPriority","Home List");
-        addListToArray(storageItems.allListItems, "get cheese", "","2020-12-06","highPriority","Home List");
-        addListToArray(storageItems.allListItems, "finish to-do list app", "","2020-12-05 ","highPriority","Coding");
-        console.log(storageItems.allListItems);
+    //reset local storage
+        // storageItems.allListItems = [];
+        // addListToArray(storageItems.allListItems, "walk ted", "","2020-12-08","highPriority","Dog Stuff");
+        // addListToArray(storageItems.allListItems, "walk dog", "","2020-12-07","mediumPriority","Dog Stuff");
+        // addListToArray(storageItems.allListItems, "walk scoop", "","2020-12-07","lowPriority","Dog Stuff");
+        // addListToArray(storageItems.allListItems, "get bread", "","2020-12-06","highPriority","Home List");
+        // addListToArray(storageItems.allListItems, "get cheese", "","2020-12-06","highPriority","Home List");
+        // addListToArray(storageItems.allListItems, "finish to-do list app", "","2020-12-05 ","highPriority","Coding");
+        // storageItems.setStorage();
 
-        var localStoragePull = function () {storageItems.allListItems = JSON.parse(localStorage.getItem('toDoList'))};
+    //pull from local storage
+        storageItems.getStorage();
+
+    //testing add
+        //var testItem = addListToArray.createListItem("title", "description", 1/1/2020, "highPriority", "project1");
 
     //testing filter
-    navigationFunctions.updateDom();
-    console.log("test");
-    newListItem.modalOpenClose();
-    newListItem.modalSubmitButton();
+     navigationFunctions.updateDom();
+     newListItem.modalOpenClose();
+     newListItem.modalSubmitButton();
 
 
 

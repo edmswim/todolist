@@ -1,5 +1,5 @@
-import filterController from './sidebarFunctions/navControls';
-import storageItems from './storage.js';
+import filterController from './sidebarFunctions/filterController';
+import storageItems from './storageItems.js';
 
 //is this the right format? Or should all of the below functions be tucked into a singular object?
 
@@ -69,7 +69,7 @@ const navigationFunctions = {
         addClickFunctionTime();
         addClickFunctionAllTasks();
         addClickFunctionTopBar();
-        displayProjects(storageItems.allListItems)
+        displayProjects(storageItems.allListItems);
         filterController.sidebarFilterClear();
     }
 }

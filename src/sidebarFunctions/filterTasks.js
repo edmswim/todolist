@@ -9,7 +9,7 @@ const sidebarTimeFilter = function (taskArray, sidebarFilter) {
     
     //This function filters for today, tomorrow, and this week if the sidebarFilter is active
 
-    //if the due date (stripped down to essence) = today (stripped down), then today
+    //if the  date (stripped down to essence) = today (stripped down), then today
     //if the due date (stripped) = tomorrow (stripped), then tomorrow
     //if the due date >= today, and is <= end of week, week
 
@@ -57,7 +57,7 @@ const compareFilter = function (array, filter, type) {
 
 }
 
-const filterObj = {
+const filterTasks = {
     completionFilter: "incomplete",
     sidebarProject: "",
     sidebarTime: "",
@@ -71,4 +71,4 @@ const filterObj = {
 }
 
 
-export default filterObj;
+export default filterTasks;
