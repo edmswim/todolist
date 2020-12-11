@@ -1,5 +1,5 @@
-import filterController from './sidebarFunctions/filterController';
-import storageItems from './storageItems.js';
+import filterController from './filterController';
+import storageItems from '../storageItems.js';
 
 //is this the right format? Or should all of the below functions be tucked into a singular object?
 

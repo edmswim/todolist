@@ -1,7 +1,7 @@
- import addListToArray from './addNewListItem.js';
- import navigationFunctions from './navigationDOM.js';
+ import addListToArray from './addNewItem/addListToArray.js';
+ import navigationFunctions from './coreFunctions/navigationFunctions.js';
  import storageItems from './storageItems.js';
- import newListItem from './newListItemDOM'
+ import newListItem from './addNewItem/newListItemDOM.js'
 
 //testing below
 
@@ -23,8 +23,7 @@
 
     //testing filter
      navigationFunctions.updateDom();
-     newListItem.modalOpenClose();
-     newListItem.modalSubmitButton();
+     newListItem.updateButtons();
 
 
 

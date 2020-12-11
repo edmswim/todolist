@@ -6,7 +6,6 @@ import storageItems from '../storageItems.js'
 
 var uploadFilteredTaskList = function() {     
         let filteredArray = filterTasks.filterArrayFunction(storageItems.allListItems);
-        console.log(filteredArray);
         uploadTaskList(filteredArray);
 }
 

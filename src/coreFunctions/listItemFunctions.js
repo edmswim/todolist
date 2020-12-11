@@ -1,4 +1,4 @@
-import storageItems from './storageItems.js';
+import storageItems from '../storageItems.js';
 
 const listItemFunctions = (() => {
     

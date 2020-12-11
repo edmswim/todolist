@@ -93,9 +93,9 @@
         <div id="editItemModal" class="modal">
             <!-- Modal content -->
             <div class="modal-content">
-              <span class="close">&times;</span>
+              <span id="closeEditModal" class="close">&times;</span>
                 <h1>Edit task</h1>
-                <form id="newItemForm">
+                <form id="editItemForm">
                     <input class="fullLine" type="text" id="taskNameEdit" name="taskName" placeholder="Name of task" required>
                     <br>
                     <textarea class="fullLine" id="taskDescriptionEdit" name="taskDescription" placeholder="Task Description" rows="4" ></textarea>
@@ -107,7 +107,7 @@
                         <option value="mediumPriority">Medium Priority</option>
                         <option value="highPriority">High Priority</option>
                     </select>
-                    <input type="submit" value="Update">                    
+                    <button type="button" id="updateButton">Update</button>                  
                </form>
                 
             </div>
