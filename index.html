@@ -73,12 +73,12 @@
               <span id="closeAddNewModal" class="close">&times;</span>
                 <h1>Add a new task</h1>
                 <form id="newItemForm">
-                    <input class="fullLine" type="text" id="taskName" name="taskName" placeholder="Name of task" required="true">
+                    <input class="fullLine" type="text" id="taskName" name="taskName" placeholder="Name of task" required>
                     <br>
                     <textarea class="fullLine" id="taskDescription" name="taskDescription" placeholder="Task Description" rows="4" ></textarea>
                     <br>
-                    <input class="partialLine" type="date" id="dueDate" name="dueDate" placeholder=""       >
-                    <input class="partialLine center" type="text" id="project" name="project" placeholder="Project Name">
+                    <input class="partialLine" type="date" id="dueDate" name="dueDate" placeholder="" required    >
+                    <input class="partialLine center" type="text" id="project" name="project" placeholder="Project Name" required>
                     <select class="partialLine" id="importance" name="importance">
                         <option value="lowPriority">Low Priority</option>
                         <option value="mediumPriority">Medium Priority</option>
@@ -100,7 +100,7 @@
                     <br>
                     <textarea class="fullLine" id="taskDescriptionEdit" name="taskDescription" placeholder="Task Description" rows="4" ></textarea>
                     <br>
-                    <input class="partialLine" type="date" id="dueDateEdit" name="dueDate" placeholder="">
+                    <input class="partialLine" type="date" id="dueDateEdit" name="dueDate" placeholder="" required>
                     <input class="partialLine center" type="text" id="projectEdit" name="project" placeholder="Project Name" required>
                     <select class="partialLine" id="importanceEdit" name="importance">
                         <option value="lowPriority">Low Priority</option>
