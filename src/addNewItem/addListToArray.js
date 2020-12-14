@@ -1,26 +1,23 @@
-import {parse} from 'date-fns'
-
-
+/* eslint-disable max-len */
 const createListItem = (targetArray, title, description, dueDate, priority, project) => {
-    var id = targetArray.length+1;
-    var dueDateParsed = new Date(dueDate);
-    var dueDateConverted = new Date(dueDateParsed.getTime() + dueDateParsed.getTimezoneOffset() * 60000)
+  const id = targetArray.length + 1;
+  const dueDateParsed = new Date(dueDate);
+  const dueDateConverted = new Date(dueDateParsed.getTime() + dueDateParsed.getTimezoneOffset() * 60000);
 
+  return {
+    id,
+    title,
+    description,
+    dueDate: dueDateConverted,
+    priority,
+    project,
+    completionStatus: 'incomplete',
+  };
+};
 
-    return {
-        id, 
-        title, 
-        description,
-        dueDate: dueDateConverted, 
-        priority, 
-        project, 
-        completionStatus: "incomplete"
-    }
-}
+const addListToArray = function (targetArray, title, description, dueDate, priority, project) {
+  const newListItem = createListItem(targetArray, title, description, dueDate, priority, project);
+  targetArray.push(newListItem);
+};
 
-const addListToArray= function(targetArray, title, description, dueDate, priority, project ) { 
-    let newListItem = createListItem(targetArray, title, description, dueDate, priority, project);
-    targetArray.push(newListItem);
-} 
-
-export default addListToArray
+export default addListToArray;
