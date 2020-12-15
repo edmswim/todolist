@@ -6,7 +6,7 @@ import storageItems from '../storageItems';
 // filter controller operates the filter task.
 // Depending on the function called, it will change the variables in filterTask and run the function in there to filter the array.
 
-const uploadFilteredTaskList = function () {
+const uploadFilteredTaskList = function uploadFilteredTaskListFunction() {
   const filteredArray = filterTasks.filterArrayFunction(storageItems.allListItems);
   uploadTaskList(filteredArray);
 };

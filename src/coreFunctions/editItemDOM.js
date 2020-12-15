@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable max-len */
 import { format } from 'date-fns';
@@ -14,10 +15,10 @@ const editListItem = (function () {
   };
 
   const updateTaskItem = function (object) {
-    console.log(object);
     const title = document.getElementById('editItemForm').elements.namedItem('taskName').value;
     const description = document.getElementById('editItemForm').elements.namedItem('taskDescription').value;
-    const dueDate = document.getElementById('editItemForm').elements.namedItem('dueDate').value;
+    const dueDateRaw = document.getElementById('editItemForm').elements.namedItem('dueDate').value;
+    const dueDate = new Date(dueDateRaw.getTime() + dueDateRaw.getTimezoneOffset() * 60000);
     const project = document.getElementById('editItemForm').elements.namedItem('project').value;
     const priority = document.getElementById('editItemForm').elements.namedItem('importance').value;
     for (let i = 0; i < storageItems.allListItems.length; i += 1) {

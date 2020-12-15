@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable no-alert */
 /* eslint-disable no-restricted-globals */
 import addListToArray from './addListToArray';

@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable max-len */
 const createListItem = (targetArray, title, description, dueDate, priority, project) => {
   const id = targetArray.length + 1;
